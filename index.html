@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="FullStax">
+<head>
+    <meta charset="UTF-8">
+    <title>FullStax</title>
+</head>
+<body ng-controller="MainController">
+
+<div>
+    <h2>Friends</h2>
+    <ul ng-repeat="friend in friends">
+        <li>name: {{friend.name}}</li>
+        <li>age: {{friend.age}}</li>
+        <li>When we met: {{friend.met}}</li>
+    </ul>
+    <button ng-click="getFriends()">Get Friends</button>
+   <div>
+        <h3>Add New Friend:</h3>
+        <input class="newFriend" type="text" placeholder="Add name" ng-model="newFriend.name">
+        <input class="newFriend" type="text" placeholder="Add age" ng-model="newFriend.age">
+        <input class="newFriend" type="text" placeholder="Add year you met" ng-model="newFriend.met">
+
+        <button ng-click="addFriends()">Add a new friend yeaaaaahh!!</button>
+   </div>
+
+    <h2>Family</h2>
+    <ul ng-repeat="familyMember in family">
+        <li>name: {{familyMember.name}}</li>
+        <li>age: {{familyMember.age}}</li>
+        <li>Our relationship: {{familyMember.relation}}</li>
+    </ul>
+    <button ng-click="getFamily()">Get Family</button>
+
+    <h2>Activities</h2>
+    <ul ng-repeat="activity in activities">
+        <li>name: {{activity.name}}</li>
+    </ul>
+    <button ng-click="getActivities()">Get Activities</button>
+
+    <h2>Personal Information</h2>
+    <ul ng-repeat="info in me">
+        <li>My Name: {{info.name}}</li>
+        <li>My Height: {{info.height}}</li>
+        <li>My Favorite Movie: {{info.favMovie}}</li>
+        <li>My Favorite Artist: {{info.favArtist}}</li>
+        <li>My Favorite Food: {{info.favFood}}</li>
+    </ul>
+    <button ng-click="getMe()">Get Personal Information</button>
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/myCtrl.js"></script>
+<script src="js/myDirectives.js"></script>
+<script src="js/myService.js"></script>
+
+</body>
+</html>
